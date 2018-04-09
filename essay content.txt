@@ -1,0 +1,4 @@
+queuing a very long task – to avoid blocking a thread for too long, you can specify a maximum wait time after which the task is rejected or re-added to the queue
+f the thread pool is too large, and threads go unused, then processing and
+memory resources are wasted maintaining the thread pool. If the thread pool is too small, then
+additional threads must be created and destroyed on the fly to handle new requests. 

@@ -1,0 +1,84 @@
+18 pictures 
+12 pictures
+04-09 00:24:26.995 20858-21343/com.example.junjie.photoupload I/System.out: IMG_20180216_194625.jpg总共耗时: 0分 10秒 933 微秒
+04-09 00:24:29.405 20858-21346/com.example.junjie.photoupload I/System.out: IMG_20180329_194301.jpg总共耗时: 0分 13秒 332 微秒
+04-09 00:24:30.869 20858-21347/com.example.junjie.photoupload I/System.out: IMG_20180307_183008.jpg总共耗时: 0分 14秒 795 微秒
+04-09 00:24:40.771 20858-21341/com.example.junjie.photoupload I/System.out: IMG_20180329_194411.jpg总共耗时: 0分 24秒 699 微秒
+04-09 00:24:42.204 20858-21345/com.example.junjie.photoupload I/System.out: IMG_20180306_234108.jpg总共耗时: 0分 26秒 129 微秒
+04-09 00:24:43.537 20858-21342/com.example.junjie.photoupload I/System.out: IMG_20180316_185646.jpg总共耗时: 0分 27秒 475 微秒
+04-09 00:24:52.545 20858-21344/com.example.junjie.photoupload I/System.out: IMG_20180306_190801.jpg总共耗时: 0分 36秒 472 微秒
+04-09 00:24:53.502 20858-21348/com.example.junjie.photoupload I/System.out: IMG_20180217_181012.jpg总共耗时: 0分 37秒 425 微秒
+04-09 00:24:56.030 20858-21350/com.example.junjie.photoupload I/System.out: IMG_20180307_183005.jpg总共耗时: 0分 39秒 949 微秒
+04-09 00:25:04.835 20858-21351/com.example.junjie.photoupload I/System.out: IMG_20180306_190805.jpg总共耗时: 0分 48秒 753 微秒
+04-09 00:25:04.980 20858-21349/com.example.junjie.photoupload I/System.out: IMG_20180306_234121.jpg总共耗时: 0分 48秒 899 微秒
+04-09 00:25:06.984 20858-21352/com.example.junjie.photoupload I/System.out: IMG_20180221_012847.jpg总共耗时: 0分 50秒 901 微秒
+
+9 pictures
+04-09 00:30:18.490 24739-24970/com.example.junjie.photoupload I/System.out: IMG_20180329_194411.jpg传输耗时: 0分 0秒 822 微秒
+04-09 00:30:18.671 24739-24968/com.example.junjie.photoupload I/System.out: IMG_20180316_185646.jpg传输耗时: 0分 1秒 19 微秒
+04-09 00:30:18.734 24739-24971/com.example.junjie.photoupload I/System.out: IMG_20180408_024037.jpg传输耗时: 0分 1秒 65 微秒
+04-09 00:30:32.023 24739-24967/com.example.junjie.photoupload I/System.out: IMG_20180329_194509.jpg传输耗时: 0分 14秒 369 微秒
+04-09 00:30:32.898 24739-24973/com.example.junjie.photoupload I/System.out: IMG_20180306_234121.jpg传输耗时: 0分 15秒 221 微秒
+04-09 00:30:33.129 24739-24972/com.example.junjie.photoupload I/System.out: IMG_20180307_183008.jpg传输耗时: 0分 15秒 459 微秒
+04-09 00:30:41.833 24739-24969/com.example.junjie.photoupload I/System.out: IMG_20180307_183005.jpg传输耗时: 0分 24秒 179 微秒
+04-09 00:30:44.476 24739-24975/com.example.junjie.photoupload I/System.out: IMG_20180408_024032.jpg传输耗时: 0分 26秒 798 微秒
+04-09 00:30:44.945 24739-24974/com.example.junjie.photoupload I/System.out: IMG_20180329_194301.jpg传输耗时: 0分 27秒 268 微秒
+----------------------------------------------------------------------------------------------------------------------------
+04-09 00:30:31.190 24739-24968/com.example.junjie.photoupload I/System.out: IMG_20180316_185646.jpg总共耗时: 0分 13秒 537 微秒
+04-09 00:30:31.195 24739-24971/com.example.junjie.photoupload I/System.out: IMG_20180408_024037.jpg总共耗时: 0分 13秒 526 微秒
+04-09 00:30:31.204 24739-24970/com.example.junjie.photoupload I/System.out: IMG_20180329_194411.jpg总共耗时: 0分 13秒 521 微秒
+04-09 00:30:41.424 24739-24967/com.example.junjie.photoupload I/System.out: IMG_20180329_194509.jpg总共耗时: 0分 23秒 772 微秒
+04-09 00:30:43.783 24739-24973/com.example.junjie.photoupload I/System.out: IMG_20180306_234121.jpg总共耗时: 0分 26秒 106 微秒
+04-09 00:30:44.018 24739-24972/com.example.junjie.photoupload I/System.out: IMG_20180307_183008.jpg总共耗时: 0分 26秒 349 微秒
+04-09 00:30:54.124 24739-24969/com.example.junjie.photoupload I/System.out: IMG_20180307_183005.jpg总共耗时: 0分 36秒 470 微秒
+04-09 00:30:56.296 24739-24975/com.example.junjie.photoupload I/System.out: IMG_20180408_024032.jpg总共耗时: 0分 38秒 619 微秒
+04-09 00:30:57.504 24739-24974/com.example.junjie.photoupload I/System.out: IMG_20180329_194301.jpg总共耗时: 0分 39秒 828 微秒
+----------------------------------------------------------------------------------------------------------------------------
+IMG_20180307_183008.jpg识别耗时: 0分 25秒 78 微秒
+IMG_20180316_185646.jpg识别耗时: 0分 25秒 78 微秒
+IMG_20180408_024037.jpg识别耗时: 0分 25秒 78 微秒
+IMG_20180329_194411.jpg识别耗时: 0分 20秒 935 微秒
+IMG_20180329_194509.jpg识别耗时: 0分 20秒 969 微秒
+IMG_20180307_183005.jpg识别耗时: 0分 21秒 43 微秒
+IMG_20180329_194301.jpg识别耗时: 0分 12秒 721 微秒
+IMG_20180306_234121.jpg识别耗时: 0分 13秒 374 微秒
+IMG_20180408_024032.jpg识别耗时: 0分 13秒 687 微秒
+
+6 pictures
+04-09 00:33:38.555 26761-26926/com.example.junjie.photoupload I/System.out: IMG_20180329_194509.jpg传输耗时: 0分 0秒 968 微秒
+04-09 00:33:38.755 26761-26931/com.example.junjie.photoupload I/System.out: IMG_20180408_024037.jpg传输耗时: 0分 1秒 162 微秒
+04-09 00:33:38.823 26761-26930/com.example.junjie.photoupload I/System.out: IMG_20180408_024032.jpg传输耗时: 0分 1秒 231 微秒
+04-09 00:33:50.432 26761-26929/com.example.junjie.photoupload I/System.out: IMG_20180329_194411.jpg传输耗时: 0分 12秒 841 微秒
+04-09 00:33:50.764 26761-26927/com.example.junjie.photoupload I/System.out: IMG_20180329_194301.jpg传输耗时: 0分 13秒 175 微秒
+04-09 00:33:50.843 26761-26928/com.example.junjie.photoupload I/System.out: IMG_20180404_120048.jpg传输耗时: 0分 13秒 248 微秒
+----------------------------------------------------------------------------------------------------------------------------
+04-09 00:33:49.927 26761-26926/com.example.junjie.photoupload I/System.out: IMG_20180329_194509.jpg总共耗时: 0分 12秒 340 微秒
+04-09 00:33:50.060 26761-26931/com.example.junjie.photoupload I/System.out: IMG_20180408_024037.jpg总共耗时: 0分 12秒 467 微秒
+04-09 00:33:50.080 26761-26930/com.example.junjie.photoupload I/System.out: IMG_20180408_024032.jpg总共耗时: 0分 12秒 488 微秒
+04-09 00:34:02.422 26761-26929/com.example.junjie.photoupload I/System.out: IMG_20180329_194411.jpg总共耗时: 0分 24秒 831 微秒
+04-09 00:34:02.848 26761-26927/com.example.junjie.photoupload I/System.out: IMG_20180329_194301.jpg总共耗时: 0分 25秒 259 微秒
+04-09 00:34:03.264 26761-26928/com.example.junjie.photoupload I/System.out: IMG_20180404_120048.jpg总共耗时: 0分 25秒 669 微秒
+
+
+
+
+3 pictures
+04-08 23:37:35.186 23397-23425/com.example.junjie.photoupload I/System.out: IMG_20180408_024032.jpg传输耗时: 0分 0秒 722 微秒
+04-08 23:37:35.524 23397-23426/com.example.junjie.photoupload I/System.out: IMG_20180408_024037.jpg传输耗时: 0分 1秒 60 微秒
+04-08 23:37:36.309 23397-23424/com.example.junjie.photoupload I/System.out: IMG_20180408_024024.jpg传输耗时: 0分 1秒 845 微秒
+----------------------------------------------------------------------------------------------------------------------------
+04-08 23:37:44.751 23397-23425/com.example.junjie.photoupload I/System.out: IMG_20180408_024032.jpg总共耗时: 0分 10秒 286 微秒
+04-08 23:37:45.773 23397-23426/com.example.junjie.photoupload I/System.out: IMG_20180408_024037.jpg总共耗时: 0分 11秒 309 微秒
+04-08 23:37:46.594 23397-23424/com.example.junjie.photoupload I/System.out: IMG_20180408_024024.jpg总共耗时: 0分 12秒 130 微秒
+
+2 pictures
+04-09 00:35:36.268 28011-28133/com.example.junjie.photoupload I/System.out: IMG_20180404_120048.jpg传输耗时: 0分 0秒 567 微秒
+04-09 00:35:36.464 28011-28134/com.example.junjie.photoupload I/System.out: IMG_20180408_024032.jpg传输耗时: 0分 0秒 764 微秒
+----------------------------------------------------------------------------------------------------------------------------
+04-09 00:35:46.363 28011-28133/com.example.junjie.photoupload I/System.out: IMG_20180404_120048.jpg总共耗时: 0分 10秒 662 微秒
+04-09 00:35:46.363 28011-28134/com.example.junjie.photoupload I/System.out: IMG_20180408_024032.jpg总共耗时: 0分 10秒 662 微秒
+
+1 picture
+04-08 23:42:57.013 23397-26668/com.example.junjie.photoupload I/System.out: IMG_20180408_024024.jpg传输耗时: 0分 0秒 774 微秒
+----------------------------------------------------------------------------------------------------------------------------
+04-08 23:43:03.633 23397-26668/com.example.junjie.photoupload I/System.out: IMG_20180408_024024.jpg总共耗时: 0分 7秒 394 微秒
