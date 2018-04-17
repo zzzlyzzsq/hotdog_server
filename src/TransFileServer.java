@@ -30,6 +30,7 @@ public class TransFileServer {
     private ExecutorService myExecutorService = null;
     int queue_size;
     int active_thread;
+    int failure=0;
 
     public static void main(String[] args) {
         new TransFileServer();
@@ -44,14 +45,16 @@ public class TransFileServer {
             //ThreadPoolExecutor myExecutorService = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
             int N_CPUS = Runtime.getRuntime().availableProcessors();
             System.out.println(N_CPUS);
-            ThreadPoolExecutor myExecutorService =new ThreadPoolExecutor(3, 3, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>());
+            ThreadPoolExecutor myExecutorService =new ThreadPoolExecutor(2, 2, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>());
             System.out.println("server is working...\n");
             Socket client = null;
             while(true)
             {
-                queue_size=myExecutorService.getQueue().size();
+
                 client = server.accept();
                 myExecutorService.execute(new ImplementsRunnable(client));
+                Thread.sleep(1);
+                queue_size=myExecutorService.getQueue().size();
                 System.out.println("接收到请求，queue size="+queue_size);
 
                 active_thread=myExecutorService.getActiveCount();
@@ -81,11 +84,12 @@ class ImplementsRunnable implements Runnable {
 
     @Override
     public void run() {
+        String trueName="";
         Calendar cc = Calendar.getInstance();
         //Socket new_skt = null;
         long start_time1 = System.currentTimeMillis();
         try {
-
+            System.out.println("start transmitting file");
             long start1=System.currentTimeMillis();
             //System.out.println("Host port is " + PORT);
 
@@ -93,48 +97,81 @@ class ImplementsRunnable implements Runnable {
             //接收客户端文件
             inputStream = new DataInputStream(skt.getInputStream());
             PrintWriter writer = new PrintWriter(skt.getOutputStream());
-            String trueName = inputStream.readUTF();
+
+            trueName = inputStream.readUTF();
+            long fileSize = inputStream.readLong();
+            if(trueName==null||fileSize==-1)
+            {
+                System.out.println("connection closed before it starts");
+                return;
+            }
             fos = new FileOutputStream("./edge/" + trueName);
             byte[] inputByte = new byte[1024 * 8];
             int length;
-            while ((length = inputStream.read(inputByte, 0, inputByte.length)) > 0) {
+
+
+            while (fileSize > 0 ){//&&(length = inputStream.read(inputByte,0,(int)Math.min(inputByte.length, fileSize))) != -1) {
+                length = inputStream.read(inputByte,0,(int)Math.min(inputByte.length, fileSize));
+                if (length == -1||length==0)
+                {
+                    System.out.println("connection broken during transmission"+trueName);
+                    return;
+                }
                 //System.out.println("正在接收数据..." + length);
 
                 fos.write(inputByte, 0, length);
+                fileSize-=length;
                 fos.flush();
 
             }
             fos.close();
 
-            //System.out.println(trueName+"图片接收完成");
+            System.out.println(trueName+"图片接收完成");
             long end0=System.currentTimeMillis();
             cc.setTimeInMillis( end0- start1);
             System.out.println(trueName+"传输耗时: " + cc.get(Calendar.MINUTE) + "分 " + cc.get(Calendar.SECOND) + "秒 " + cc.get(Calendar.MILLISECOND) + " 微秒");
 
             //开始识别
-            try {
+            //try {
                 //System.out.println("Photo "+trueName+" recognition is ongoing");
                 ProcessBuilder pb = new ProcessBuilder("python", "label_image_edge.py", trueName);
-                //pb.redirectOutput(Redirect.INHERIT);
                 pb.redirectError(Redirect.INHERIT);
                 Process p = pb.start();
-                p.waitFor();
+                pb.redirectError(Redirect.INHERIT.INHERIT);
 
+                BufferedReader in=new BufferedReader(new InputStreamReader(skt.getInputStream()));
+                while (p.isAlive()) {
+                    skt.setSoTimeout(250);
+                    try {
+                        String d = in.readLine();
+                        if (d == null) {
+                            System.out.println("Failure " + trueName);
+                            //删除文件
+                            try {
+                                File file = new File("./edge/" + trueName);
+
+                                if (file.delete()) {
+                                    //System.out.println(file.getName() + " is deleted!");
+                                } else {
+                                    System.out.println("Delete operation is failed."+trueName);
+                                }
+
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            failure += 1;
+                            return;
+                        }
+                    }catch(IOException E){}
+                }
+
+                //p.waitFor();
 
                 // 更改输入输出流
                 BufferedReader bfr = new BufferedReader(new InputStreamReader(p.getInputStream()));
 
                 String line = "";
                 line = bfr.readLine();
-                // display each output line form python script
-                /*
-                if (line.charAt(0) == 'h')
-                    flag = "hotdog.jpg";
-                else if(line.charAt(0)=='r')
-                    flag = "nothotdog.jpg";
-                else
-                    flag= "invalid";
-                */
                 //System.out.println(line);
                 // 服务器发送消息
                 writer.println(line);
@@ -150,29 +187,31 @@ class ImplementsRunnable implements Runnable {
                 inputStream.close();
 
 
-                //删除文件
-
-                try {
-                    File file = new File("./edge/" + trueName);
-
-                    if (file.delete()) {
-                        //System.out.println(file.getName() + " is deleted!");
-                    } else {
-                        System.out.println("Delete operation is failed.");
-                    }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+           // } catch (IOException e) {
+            //    e.printStackTrace();
+             //   System.out.println("connection failed");
+             //   return;
+            //} //catch (InterruptedException e) {
+              //  e.printStackTrace();
+           // }
 
         } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("fail outside");
+            return;
+        }
+
+        //删除文件
+        try {
+            File file = new File("./edge/" + trueName);
+
+            if (file.delete()) {
+                //System.out.println(file.getName() + " is deleted!");
+            } else {
+                System.out.println("Delete operation is failed."+trueName);
+            }
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
