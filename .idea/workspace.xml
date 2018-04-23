@@ -52,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/src/TransFileServer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="937">
-              <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+              <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1430#1431#0" expanded="true" />
@@ -769,7 +769,7 @@
     <entry file="file://$PROJECT_DIR$/src/TransFileServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="937">
-          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+          <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1430#1431#0" expanded="true" />
